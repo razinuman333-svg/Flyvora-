@@ -51,7 +51,7 @@ function Navbar( {theme,setTheme}) {
           <a onClick={()=>setSideBarOpen(false)} href='#' className='sm:hover:border-b'>Home</a>
           <a onClick={()=>setSideBarOpen(false)} href='#packages' className='sm:hover:border-b'>Packages</a>
           <a onClick={()=>setSideBarOpen(false)} href='#About-us' className='sm:hover:border-b'>About us</a>
-          <a onClick={()=>setSideBarOpen(false)} href='#contact-us' className='sm:hover:border-b'>Contact Us</a>
+          <a onClick={()=>setSideBarOpen(false)} href='#meet-team' className='sm:hover:border-b'>Meet Team</a>
 
         </div>
         <div className='flex items-center gap-2 sm:gap-4'>
