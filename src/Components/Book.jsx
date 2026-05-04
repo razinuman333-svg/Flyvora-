@@ -36,10 +36,10 @@ function Book() {
     }
 
   return (
-    <div className='flex flex-col items-center gap-7 px-4 sm:px-12
+    <div className='h-200 flex flex-col items-center gap-7 px-4 sm:px-12
     lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white'>
 
-         <form onSubmit={onSubmit} className='grid sm:grid-cols-2  gap-3 sm:gap-5 max-w-2xl w-full'>
+         <form onSubmit={onSubmit} className=' grid sm:grid-cols-2  gap-3 sm:gap-5 max-w-2xl w-full'>
 
             <div>
                 <p className='mb-2 text-sm font-medium'>Your Name</p>

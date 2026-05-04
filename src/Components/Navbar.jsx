@@ -3,7 +3,7 @@ import assets from '../assets/Assets'
 import ThemeToglebtn from './ThemeToglebtn'
 import { GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged } from 'firebase/auth'
 import {auth} from '../Config'
-
+import { motion } from 'framer-motion'
 
 
 
@@ -35,11 +35,18 @@ function Navbar( {theme,setTheme}) {
 
   return (
 
-    <div className='flex justify-between items-center  px-4 sm:px-12 lg:px-24
+    <motion.div 
+
+    initial={{opacity:0,y:-50}}
+    animate={{opacity:1,y:0}}
+    transition={{duration:0.6,ease:'easeOut'}}
+    
+    
+    className='flex justify-between items-center  px-4 sm:px-12 lg:px-24
     xl:px-40 py-0 -mt-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50
     dark:bg-black'>
 
-        <img className=' h-40 w-32 sm:w-40' src={theme === 'dark' ? assets.blackbg : assets.whitebg}></img>
+        <img className=' h-30 w-32 sm:w-40' src={theme === 'dark' ? assets.blackbg : assets.whitebg}></img>
 
 
         <div className={`text-gray-700 dark:text-white sm:text-sm ${sideBarOpen ? 'max-sm:w-60 max-sm:pl-10':' max-sm:w-0 overflow-hidden'} max-sm:fixed
@@ -79,7 +86,7 @@ function Navbar( {theme,setTheme}) {
 
         </div>
       
-    </div>
+    </motion.div>
   )
 }
 

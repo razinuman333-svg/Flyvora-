@@ -1,9 +1,18 @@
 import React from 'react'
 import assets from '../assets/Assets'
+import { motion } from 'framer-motion'
 
 function Hero() {
   return (
-    <div id='hero' className='flex flex-col items-center gap-6 py-20 px-4 sm:px-12
+    <motion.div
+    initial={{opacity:0,y:20}}
+    whileInView={{opacity : 1,y:0}}
+    transition={{duration:0.5,delay:0.7}}
+    viewport={{once:true}}
+    
+    
+    
+    id='hero' className='flex flex-col items-center gap-6 py-20 px-4 sm:px-12
     lg:px-24 xl:px-40 text-center w-full overflow-hidden text-gray-700
     dark:text-white'>
 
@@ -21,7 +30,7 @@ function Hero() {
 
         </div>
       
-    </div>
+    </motion.div>
   )
 }
 

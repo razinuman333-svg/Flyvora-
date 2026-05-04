@@ -9,6 +9,7 @@ import Book from "./Components/Book"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import About from "./Components/About"
+import Footer from "./Components/Footer"
 
 function App() {
   const [theme,setTheme]=useState('light')
@@ -31,6 +32,7 @@ function App() {
       <Title title='Meet our Team' desc='Our dedicated travel experts bring years of global experience to help you navigate the world with confidence and ease.'/>
       <Team/>
       <About/>
+      <Footer theme={theme}/>
    </>} />  
    <Route path="/book" element={<Book/>}/>
   

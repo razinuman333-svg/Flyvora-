@@ -2,6 +2,7 @@ import React from 'react'
 import Title from './Title'
 import assets from '../assets/Assets'
 import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 function Packages() {
   const navigate = useNavigate()
@@ -72,17 +73,29 @@ function Packages() {
 
 
   return (
-    <div className=" relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white" id='packages'>
+    <div 
+     
+    
+   
+
+    
+    
+    className=" relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white" id='packages'>
       
 
       {pkges.map((pkg,index) => (
-    <div
+    <motion.div
+    initial={{opacity:0,y:30}}
+    whileInView={{opacity : 1,y:0}}
+    transition={{duration:0.5,delay:index*0.2}}
+    viewport={{once:true}}
       key={index}
       className="  dark: bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
     >
       
       {/* Image */}
-      <div className="relative overflow-hidden">
+      <div
+      className="relative overflow-hidden">
         <img
           src={pkg.image}
           alt={pkg.name}
@@ -105,7 +118,7 @@ function Packages() {
           Book Now
         </button>
       </div>
-    </div>
+    </motion.div>
   ))}
 </div>
 
