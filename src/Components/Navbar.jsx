@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 
 function Navbar( {theme,setTheme}) {
 
- const [sideBarOpen,setSideBarOpen]=useState(true)
+ const [sideBarOpen,setSideBarOpen]=useState(false)
   const [user,setUser]=useState(null)
 
   useEffect(()=>{
@@ -53,7 +53,7 @@ function Navbar( {theme,setTheme}) {
         top-0 bottom-0 right-0 max-sm:min-h-screen max-sm:h-full max-sm:flex-col max-sm:bg-primary max-sm:text-white
         max-sm:pt-20 flex sm:items-center gap-5 transition-all`}>
 
-          <img className='w-5 absolute right-4 top-4 sm:hidden' src={assets.close_icon} onClick={()=> setSideBarOpen(false)}/>
+                   <img className='w-5 absolute right-4 top-4 sm:hidden' src={assets.close_icon} onClick={()=> setSideBarOpen(false)}/>
 
           <a onClick={()=>setSideBarOpen(false)} href='#' className='sm:hover:border-b'>Home</a>
           <a onClick={()=>setSideBarOpen(false)} href='#packages' className='sm:hover:border-b'>Packages</a>
@@ -62,10 +62,10 @@ function Navbar( {theme,setTheme}) {
 
         </div>
         <div className='flex items-center gap-2 sm:gap-4'>
-          <img onClick={()=> setSideBarOpen(true)} className='w-8 sm:hidden' src={theme === 'dark' ? assets.menu_icon_dark : assets.menu_icon}/>
+         
              
              <ThemeToglebtn theme={theme} setTheme={setTheme}/>
-
+    
 
              {!user ? (<a onClick={()=>{
                 handlelogin()
@@ -80,7 +80,7 @@ function Navbar( {theme,setTheme}) {
           cursor-pointer hover:scale-103 transition-all'>Logout</a>)
           }
           
-          
+           <img onClick={()=> setSideBarOpen(true)} className='w-8 sm:hidden' src={theme === 'dark' ? assets.menu_icon_dark : assets.menu_icon}/>
 
 
 
