@@ -1,16 +1,54 @@
-# React + Vite
+# ✈️ Flyvora – Modern Travel Agency Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Flyvora** is a modern, full-stack travel agency web application designed to give users a seamless vacation planning and booking experience. From curated holiday packages across global destinations to team introductions and dynamic theme toggling, Flyvora makes travel planning effortless, visual, and engaging.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+- **Live URL:** [flyvora.netlify.app](https://flyvora.netlify.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- **Hero & Landing Section:** Clean, modern headline design welcoming users to explore travel destinations.
+- **Curated Travel Packages:** Interactive package cards displaying destinations (Italy, Dubai, Switzerland, Manali, Norway, Thailand, Bali, Australia) along with dynamic pricing in INR.
+- **Dark / Light Mode Toggle:** Smooth theme switcher using modern CSS and React state management.
+- **Meet Our Team:** Dedicated showcase section highlighting travel experts and guides.
+- **Interactive Toast Notifications:** Real-time feedback and alerts integrated via `react-toastify`.
+- **Animated UI Components:** Smooth visual animations powered by `framer-motion`.
+- **Newsletter Subscription:** Integrated subscription form in the footer section.
+- **Firebase Authentication & Backend:** Built-in backend integration for secure user login and data persistence.
+
+---
+
+## 🛠️ Tech Stack & Dependencies
+
+- **Frontend Framework:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Routing:** [React Router v7](https://reactrouter.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Notifications:** [React Toastify](https://fkhadra.github.io/react-toastify/)
+- **Backend / Authentication:** [Firebase v12](https://firebase.google.com/)
+- **Hosting:** [Netlify](https://www.netlify.com/)
+
+---
+
+Flyvora/
+├── public/              # Static assets (images, icons)
+├── src/
+│   ├── assets/          # Project visual assets
+│   ├── components/      # Reusable UI components (ThemeToggleBtn, etc.)
+│   ├── pages/           # Page routes (Home, Packages, About, etc.)
+│   ├── firebase.js      # Firebase setup & configuration
+│   ├── App.jsx          # Root component & router
+│   └── main.jsx         # App entry point
+├── .gitignore
+├── index.html
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
