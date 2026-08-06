@@ -38,6 +38,8 @@
 
 ---
 
+📂 Project Structure
+
 Flyvora/
 ├── public/              # Static assets (images, icons)
 ├── src/
