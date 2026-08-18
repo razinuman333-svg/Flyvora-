@@ -17,7 +17,7 @@ function Footer({theme}) {
         <div className='flex justify-between lg:items-center
         max-lg:flex-col gap-10'>
             <div className='space-y-5 text-sm text-gray-700 dark:text-white'>
-                <img className='w-32 sm:w-44' src={theme === 'dark'? assets.blackbg : assets.whitebg}/>
+                <img className='w-32 sm:w-44' src={assets.whitebg}/>
                 <p className='max-w-md'>From strategy execution,we craft digital solutions that move your business forward</p>
                 <ul className='flex gap-8'>
                     <li><a className='hover:text-primary' href='#hero'>Home</a></li>
